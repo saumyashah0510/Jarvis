@@ -8,7 +8,7 @@ from groq import Groq
 
 recognizer = sr.Recognizer()
 engine = pyttsx3.init() #initializes pyttsx3
-news_API = "a8c4f635e8a84582b95485c6ae26b524"
+news_API = "API_key"
 
 # text to speech
 def speak(text):
@@ -16,7 +16,7 @@ def speak(text):
     engine.runAndWait()
     
 def ai_process(command):
-    client = Groq(api_key="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")
+    client = Groq(api_key="Api_key")
     
     response = client.chat.completions.create(
     model="llama3-70b-8192",  # Or "mixtral-8x7b-32768"
